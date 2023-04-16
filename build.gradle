@@ -13,8 +13,41 @@ repositories {
 }
 
 dependencies {
+	// Base
 	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// Lombok
+	compileOnly 'org.projectlombok:lombok'
+	testCompileOnly 'org.projectlombok:lombok'
+
+	// Logging
+	implementation 'org.apache.logging.log4j:log4j-api:2.19.0'
+	implementation 'org.apache.logging.log4j:log4j-core:2.19.0'
+
+	// JSON
+	implementation 'com.google.code.gson:gson:2.10.1'
+
+	// DB
+	runtimeOnly 'org.postgresql:postgresql'
+
+	// Flyway
+	implementation 'org.flywaydb:flyway-core'
+
+	// Map Struct
+	implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+
+	// AP(Annotation Processor)
+	annotationProcessor 'org.projectlombok:lombok'
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+	annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
+	testAnnotationProcessor 'org.projectlombok:lombok'
 }
 
 tasks.named('test') {
