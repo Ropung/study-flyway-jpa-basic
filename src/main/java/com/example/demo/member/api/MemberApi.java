@@ -31,4 +31,16 @@ public class MemberApi {
 
         return new MemberSignUpResponseDto( memberService.signUp(body) );
     }
+
+    @PostMapping("/sign-up/mapstruct")
+    public MemberSignUpResponseDto signUp2(
+            @RequestBody @Valid MemberSignUpRequestDto body,
+            HttpServletRequest request
+    ) {
+        // ip example
+        String ip = request.getHeader("X-Forwarded-For");
+        if (ip == null) ip = request.getRemoteAddr();
+
+        return new MemberSignUpResponseDto(memberService.signUpUsingMapStruct(body));
+    }
 }

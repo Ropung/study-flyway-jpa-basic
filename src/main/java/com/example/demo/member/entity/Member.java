@@ -35,7 +35,7 @@ public class Member extends UuidBaseEntity {
 
     @Column
     @Enumerated(EnumType.STRING)
-    private AccountStatus status;
+    private AccountStatus status = AccountStatus.ACTIVE;
 
     @Column
     @Builder.Default

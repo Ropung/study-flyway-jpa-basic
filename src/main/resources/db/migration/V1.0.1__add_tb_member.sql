@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS jpa_basic.member (
     id              UUID,
-    email           VARCHAR(30)         NOT NULL,
+    email           VARCHAR(30)         NOT NULL    UNIQUE,
     password        VARCHAR(100)        NOT NULL,
     nickname        VARCHAR(30)         NOT NULL,
     status          VARCHAR(30)         NOT NULL,
