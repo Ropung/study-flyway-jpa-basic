@@ -19,6 +19,7 @@ import static com.example.demo.support.Constants.DEFAULT_TIMEZONE_ID;
 @Table(
         name = MySchemaConstants.TB_MEMBER,
         // (원래는 생략 가능) 스키마 구분할 때는 스키마 이름을 명시함.
+        schema = MySchemaConstants.SCHEMA,
         catalog = MySchemaConstants.SCHEMA
 )
 // 그 외 대부분 Flyway에 의해서 생성하니까, JPA에 의한 생성을 위한 애노테이션 등은 대부분 생략되고 삭제되어도 됨.
